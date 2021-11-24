@@ -11,6 +11,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TerapeutaComponent } from './components/terapeuta/terapeuta.component';
 import { PacientesComponent } from './components/pacientes/pacientes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     TablaPacientesComponent,
     NotFoundComponent,
     TerapeutaComponent,
-    PacientesComponent
+    PacientesComponent,
+    InicioComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

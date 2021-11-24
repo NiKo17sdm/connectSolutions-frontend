@@ -16,5 +16,8 @@ export class PacientesService {
   public obtenerPaciente(id: number){}
   public agregarPaciente(paciente: any){}
   public actualizarPaciente(paciente: any){}
-  public eliminarPaciente(id:number){}
+
+  public eliminarPaciente(id:number): Promise<any>{
+    return this.http.delete(`${environment.apiUrl}/eliminarPaciente/${id}`).toPromise();
+  }
 }
