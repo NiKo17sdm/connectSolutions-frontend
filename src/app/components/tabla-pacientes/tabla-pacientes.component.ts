@@ -1,6 +1,6 @@
+import { PacienteModel } from './../../models/paciente';
 import { PacientesService } from './../../services/pacientes/pacientes.service';
 import { Component, OnInit } from '@angular/core';
-import { PacienteModel } from 'src/app/models/paciente';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,8 +15,8 @@ export class TablaPacientesComponent implements OnInit {
   constructor(private pacientesService: PacientesService, private router: Router) { }
 
   async ngOnInit(): Promise<void> {
+    localStorage.clear();
     this.pacientes = await this.obtenerPacientes();
-    console.log(this.pacientes)
   }
 
   private async obtenerPacientes(): Promise<any>{
@@ -38,6 +38,12 @@ export class TablaPacientesComponent implements OnInit {
       console.log(error);
     });
   }
+
+  public irActualizarPaciente(paciente: PacienteModel){
+    localStorage.setItem('actualizarPaciente', JSON.stringify(paciente));
+    this.router.navigate(['/formulario-paciente']);
+  }
+
 }
 
 

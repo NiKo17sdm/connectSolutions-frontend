@@ -1,3 +1,4 @@
+import { FormularioPacienteComponent } from './components/formulario-paciente/formulario-paciente.component';
 import { ErrorComponent } from './components/error/error.component';
 import { PacientesComponent } from './components/pacientes/pacientes.component';
 import { TerapeutaComponent } from './components/terapeuta/terapeuta.component';
@@ -9,6 +10,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
   {path: 'pacientes', component: PacientesComponent},
+  {path: 'formulario-paciente', component: FormularioPacienteComponent},
   {path: 'error', component: ErrorComponent},
   {path: 'terapeuta', component: TerapeutaComponent},
   {path: '', component: InicioComponent},

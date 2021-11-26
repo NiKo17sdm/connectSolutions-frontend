@@ -13,6 +13,8 @@ import { PacientesComponent } from './components/pacientes/pacientes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ErrorComponent } from './components/error/error.component';
+import { FormularioPacienteComponent } from './components/formulario-paciente/formulario-paciente.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { ErrorComponent } from './components/error/error.component';
     TerapeutaComponent,
     PacientesComponent,
     InicioComponent,
-    ErrorComponent
+    ErrorComponent,
+    FormularioPacienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [PacientesService],
   bootstrap: [AppComponent]
